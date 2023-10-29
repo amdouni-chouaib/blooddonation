@@ -1,0 +1,22 @@
+<form [formGroup]="loginForm">
+  <div class="center">
+    <div class="card" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title">Login</h5>
+        <div class="form-group">
+          <label for="emails">Email address</label>
+          <input type="email" class="form-control" id="emails" formControlName="email">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" formControlName="password">
+        </div><br>
+<div style="display: flex;justify-content: space-between;">
+    <a class="btn btn-success" (click)="login()">Login</a>
+<div style="display: flex;">
+    <h5>don't have an account yet ?</h5><h4><a style="text-decoration: none;" routerLink="/signup">signup</a></h4>
+</div>
+</div> 
+     </div>
+    </div>
+  </div>
+  
+</form>
