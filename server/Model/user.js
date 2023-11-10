@@ -10,6 +10,10 @@ const userSchema = new mongoose.Schema({
   codepostal: String,
   typedesang: String,
   pdfPath: String,
+  isAdminAccepted:{
+    type:Boolean,
+    default:false
+  }
 });
 
 const User = mongoose.model('User', userSchema);

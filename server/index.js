@@ -2,6 +2,9 @@
     const mongoose = require('mongoose');
     const bodyParser = require('body-parser');
     const userRoutes = require('./Router/userRoutes');
+    const bloodRoutes = require('./Router/bloodRoutes');
+    const eventRoutes = require('./Router/eventRoutes');
+
     const cors = require('cors'); // Require the cors package
     const dotenv = require('dotenv');
 
@@ -21,6 +24,10 @@
 
     // Use your user routes
     app.use('/', userRoutes);
+    app.use('/', bloodRoutes);
+    app.use('/', eventRoutes);
+
+    
 
     app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
