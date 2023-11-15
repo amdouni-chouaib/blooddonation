@@ -1,34 +1,46 @@
-<div class="center" >
-    <div class="card" style="width: 30rem;">
-      <div class="card-body">
-        <h5 class="card-title">Register</h5>
-        <div class="form-group">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Your Page Title</title>
+</head>
+<body>
+
+  <div class="background-image">
+      <!-- Your form goes here -->
+      <div class="formclass2">
+        <form  [formGroup]="signupForm" (submit)="onSubmit()">
+          <div class="form_div">
             <label for="nom">Nom</label>
-            <input type="text" class="form-control" id="nom">
+            <input type="text" class="field_class" id="nom" formControlName="nom">
             <label for="prenom">Prénom</label>
-            <input type="text" class="form-control" id="prenom">
+            <input type="text" class="field_class" id="prenom" formControlName="prenom">
             <label for="dates">Date de Naissance</label>
-            <input type="date" class="form-control" id="dates">
+            <input type="date" class="field_class" id="dates" formControlName="dates">
             <label for="phone">téléphone</label>
-            <input type="tel" class="form-control" id="phone">
+            <input type="tel" class="form-control" id="phone" formControlName="phone">
             <label for="emails">Email address</label>
-          <input type="email" class="form-control" id="emails">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" id="password">
-          <label for="postal">Code Postal</label>
-            <input type="number" class="form-control" id="postal">
+            <input type="email" class="field_class" id="emails" formControlName="email">
+            <label for="password">Password</label>
+            <input type="password" class="field_class" id="password" formControlName="password">
+            <label for="postal">Code Postal</label>
+            <input type="number" class="field_class" id="postal" formControlName="codepostal">
             <label for="types">Type de Sang</label>
-            <input type="text" class="form-control" id="types">
+            <input type="text" class="field_class"id="types" formControlName="typedesang">
             <label for="files">Fiche Médicale</label>
-            <input type="file" class="form-control" id="files" accept="application/pdf">
-        </div><br>
-<div style="display: flex;justify-content: space-between;">
-    <a class="btn btn-success">Register</a>
-<div style="display: flex;">
-    <h5>Already have an account ?</h5><h4><a style="text-decoration: none;" routerLink="/login">Register</a></h4>
-</div>
-</div> 
-     </div>
-    </div>
+            <input type="file" class="field_class" id="files" formControlName="files" accept="application/pdf" (change)="onFileChange($event)">
+            <!-- <button class="submit_class" type="submit"  (click)="login()">Login</button> -->
+          </div>
+          
+          <div class="info_div">
+              <p>don't have an account yet ?<a  routerLink="/signup">signup</a></p>
+          </div>
+      </form>
+      </div>
+     
   </div>
-  
+
+</body>
+</html>

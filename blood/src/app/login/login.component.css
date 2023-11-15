@@ -1,7 +1,63 @@
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    padding-top: 10%;
-  }
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+ 
+    position: relative;
+    height: 70vh; /* Use 100vh to cover the entire viewport height */
+    width: 100%;
+    background: url("../../assets/images/smile.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden; /* Ensure the image doesn't overflow the viewport */
+}
+
+form {
+    
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the form is above the background image */
+    background-color: rgba(255, 255, 255,0.7); /* Background color with some transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow for a subtle border effect */
+}
+
+.form_div {
+    text-align: left;
+}
+.formclass2{
+    padding-right: 200px !important;
+}
+
+.field_class {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    
+}
+
+.submit_class {
+    width: 100%;
+    padding: 10px;
+    background-color: #223a66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit_class:hover {
+    background-color: #45a049;
+}
+
+.info_div {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Rest of your existing styles */

@@ -1,22 +1,32 @@
-<form [formGroup]="loginForm">
-  <div class="center">
-    <div class="card" style="width: 30rem;">
-      <div class="card-body">
-        <h5 class="card-title">Login</h5>
-        <div class="form-group">
-          <label for="emails">Email address</label>
-          <input type="email" class="form-control" id="emails" formControlName="email">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" formControlName="password">
-        </div><br>
-<div style="display: flex;justify-content: space-between;">
-    <a class="btn btn-success" (click)="login()">Login</a>
-<div style="display: flex;">
-    <h5>don't have an account yet ?</h5><h4><a style="text-decoration: none;" routerLink="/signup">signup</a></h4>
-</div>
-</div> 
-     </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Your Page Title</title>
+</head>
+<body>
+
+  <div class="background-image">
+      <!-- Your form goes here -->
+      <div class="formclass2">
+        <form  class="form_class" [formGroup]="loginForm">
+          <div class="form_div">
+            <label for="emails">Email address</label>
+            <input type="email" class="field_class" id="emails" formControlName="email">
+            <label for="password">Password</label>
+            <input type="password" class="field_class" id="password" formControlName="password">
+            <button class="submit_class" type="submit"  (click)="login()">Login</button>
+          </div>
+          
+          <div class="info_div">
+              <p>don't have an account yet ?<a  routerLink="/signup">signup</a></p>
+          </div>
+      </form>
+      </div>
+     
   </div>
-  
-</form>
+
+</body>
+</html>
